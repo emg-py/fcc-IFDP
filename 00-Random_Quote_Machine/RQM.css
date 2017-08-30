@@ -22,56 +22,39 @@ body {
 }
 
 /* la barre 'header' */
-#en-tete {
-
+.en-tete {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 1rem;
 }
 
-/* Panneau d'informations 
-   s'affiche après un clic - 'collapse'
-*/
-#navbarContent {
-    position: absolute;
-    z-index: 1000;
-    overflow-y: auto;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all .4s ease 0s;
-    -moz-transition: all .4s ease 0s;
-    -ms-transition: all .4s ease 0s;
-    -o-transition: all .4s ease 0s;
-    transition: all .4s ease 0s;
-    background: #222;
-    margin: 0 -18px;
+.titre {
+  display: inline-block;
+margin-right: 1rem;
+margin-bottom: 0;
+font-size: 1.5rem;
+align-items: center;
+white-space: nowrap;
+color: #000;
 }
 
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999;
+#Informations {
+      position: absolute;
+      z-index: 1000;
+      overflow-y: auto;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
 }
 
-.sidebar-nav > .sidebar-brand {
-    font-size: 18px;
-    line-height: 55px;
-    height: 55px;
+.col-12 {
+      padding: 0;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-.toggle {
-    font-size: 1em;
-    margin: 5px 5px 0 0;
-    padding: 15px 20px;
-}
-
-.card {
+#poeme {
   width: 100%;
   padding-top: 150%; /* 1:1.5 'Aspect Ratio' d'un recueil */
   position: relative;
@@ -83,9 +66,4 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  padding-top: 8.5rem;
-}
-
-.poem {
-  width: 100%;
 }

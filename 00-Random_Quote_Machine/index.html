@@ -1,5 +1,4 @@
   <!DOCTYPE html>
-
   <html lang = "fr">
     <head>
       <meta charset="utf-8">
@@ -37,67 +36,60 @@
         <div class="row justify-content-center">
           <div class="col-12 col-sm-12 col-md-8 col-lg-6">
             <header id="en-tete">
-
 <!-- Navigation
 ================================================== -->
-              <nav class="navbar navbar-toggleable-xs navbar-light bg-inverse">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#">
-                    <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-top" alt="#en-tete"> Guillevic <em>Carnac</em>
-                  </a>
-                </div><!-- fin navbar-header -->
-<!-- Réduire la barre de navigation pour tous les écrans -->
-                <div>
-                  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div><!-- fin button -->
-              </nav>
+              <div class="en-tete align-items-center">
+                <h1 class="titre">
+                  <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-center" alt="#en-tete"> Guillevic <em>Carnac</em>
+                </h1>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#Informations" aria-expanded="false" aria-controls="Informations">
+                Informations
+                </button>              
+              </div>
             </header>
 <!-- Contenu affiché après clic sur le bouton de menu -->
-            <section class="justify-content-center">
-              <div class="collapse" id="navbarContent">
-                <div class="bg-inverse p-4">
-                  <h4 class="text-white">À propos</h4>
-                  <span class="text-muted">Générateur aléatoire de citations</span>
-                  <p class="text-muted">
-                    Cette page présente une utilisation des 'apis' de Wikiquote.org dans le cadre d'un exercice 
-                    du programme freecodecamp.org.
-                  </p>
-                  <p class="text-muted">Les extraits du poème <em>Carnac</em> sont consultables 
-                    <a href="https://fr.wikiquote.org/wiki/Carnac" alt="page Wikiquote du poème Carnac">sur cette page Wikiquote.fr</a>
-                  </p>
-                  <p class="text-muted">Ils sont reproduits dans le cadre de la licence Creative Commons CC-BY-SA de Wikipedia.
-                </div><!-- fin bg-inverse p-4 -->
-               </div><!-- fin navbar-content -->
+            <section>
+            <div class="collapse justify-content-center col-12" id="Informations">
+              <div class="card">
+                <h4>À propos</h4>
+                <span class="text-muted">Générateur aléatoire de citations</span>
+                <p class="text-muted">
+                Cette page présente une utilisation des 'apis' de Wikiquote.org dans le cadre d'un exercice 
+                du programme freecodecamp.org.
+                </p>
+                <p class="text-muted">Les extraits du poème <em>Carnac</em> sont consultables 
+                  <a href="https://fr.wikiquote.org/wiki/Carnac" alt="page Wikiquote du poème Carnac">sur cette page Wikiquote.fr</a>
+                </p>
+                <p class="text-muted">Ils sont reproduits dans le cadre de la licence Creative Commons CC-BY-SA de Wikipedia.</p>
+              </div>
+            </div>
 <!-- Contenu généré par Wikiquote - poème -->
-               <div class="card justify-content-center">
-                 <div class="card-body col-12">
-                  <div class="poem col-12 col-sm-8 col-lg-6 mx-auto">
-                    <p><span class="citation">Mer au bord du néant<br />
-                    Qui se mêle au néant<br />
-                    <br />
-                    Pour mieux savoir le ciel,<br />
-                    Les plages, les rochers,<br />
-                    <br />
-                    Pour mieux les recevoir.</span></p>
-                  </div><!-- fin poème -->
-                </div><!-- fin card-body -->
-              </div><!-- fin card -->
+            <div class="card justify-content-center" id="poeme">
+              <div class="card-body col-12">
+                <div class="poem">
+                  <p><span class="citation">Mer au bord du néant<br />
+                  Qui se mêle au néant<br />
+                  <br />
+                  Pour mieux savoir le ciel,<br />
+                  Les plages, les rochers,<br />
+                  <br />
+                  Pour mieux les recevoir.</span></p>
+                </div><!-- fin poème -->
+              </div><!-- fin card-body -->
+            </div><!-- fin card -->
 <!-- Boutons Tweeter et Flèche -->
-              <div class="buttons">
-                <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <button class="button" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                </a></button>
-              </div><!-- fin buttons -->
+            <div class="buttons">
+              <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <button class="button" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </a></button>
+            </div><!-- fin buttons -->
             </section>
           </div><!-- fin col -->
         </div><!-- fin row -->
       </div><!-- fin container -->
-
 <!-- chargement des scripts Bootstrap -->
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
