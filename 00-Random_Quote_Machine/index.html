@@ -25,8 +25,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="RQM.css">
-  <!-- Les icônes Iconic pour Bootstrap 4 - pas de cdn - télécharger ou vérifier la disponibilité -->
-      <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
   <!-- Fichiers de script, bien noter la balise fermante -->
       <script src="https://use.typekit.net/qbk5shm.js"></script>
       <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -34,21 +32,33 @@
     <body>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-sm-12 col-md-8 col-lg-6">
-            <header id="en-tete">
+          <div class="col-12">
+            <header id="en-tete clearfix">
 <!-- Navigation
 ================================================== -->
               <div class="en-tete align-items-center">
                 <h1 class="titre">
                   <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-center" alt="#en-tete"> Guillevic <em>Carnac</em>
                 </h1>
-                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#Informations" aria-expanded="false" aria-controls="Informations">
-                Informations
+                <button class="btn fa fa-bars" type="button" data-toggle="collapse" data-target="#Informations" aria-expanded="false" aria-controls="Informations">
+                
                 </button>              
-              </div>
+              </div> 
+              <!-- Boutons Tweeter et Flèche -->
+    
+            <div class="row buttons navbar-fixed-middle">
+              <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <button class="button float-right" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+              </button>
+            </div><!-- fin row buttons -->
             </header>
 <!-- Contenu affiché après clic sur le bouton de menu -->
             <section>
+
+            
             <div class="collapse justify-content-center col-12" id="Informations">
               <div class="card">
                 <h4>À propos</h4>
@@ -63,37 +73,29 @@
                 <p class="text-muted">Ils sont reproduits dans le cadre de la licence Creative Commons CC-BY-SA de Wikipedia.</p>
               </div>
             </div>
+
 <!-- Contenu généré par Wikiquote - poème -->
-            <div class="card justify-content-center" id="poeme">
-              <div class="card-body col-12">
-                <div class="poem">
-                  <p><span class="citation">Mer au bord du néant<br />
-                  Qui se mêle au néant<br />
-                  <br />
-                  Pour mieux savoir le ciel,<br />
-                  Les plages, les rochers,<br />
-                  <br />
-                  Pour mieux les recevoir.</span></p>
+            <div class="card justify-content-center">
+              <div class="card-body col-12" id="poeme">
+                <div class="" id="poemes">                
                 </div><!-- fin poème -->
               </div><!-- fin card-body -->
             </div><!-- fin card -->
-<!-- Boutons Tweeter et Flèche -->
-            <div class="buttons">
-              <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <button class="button" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a></button>
-            </div><!-- fin buttons -->
             </section>
           </div><!-- fin col -->
         </div><!-- fin row -->
+
+
       </div><!-- fin container -->
+
+
+
+
 <!-- chargement des scripts Bootstrap -->
-      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"</script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="RQM.js"></script>
     </body>
   </html>
