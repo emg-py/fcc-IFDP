@@ -32,8 +32,8 @@
     <body>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12">
-            <header id="en-tete clearfix">
+          <div class="col-10 justify-content-center">
+            <header id="en-tete">
 <!-- Navigation
 ================================================== -->
               <div class="en-tete align-items-center">
@@ -45,46 +45,80 @@
                 </button>              
               </div> 
               <!-- Boutons Tweeter et Flèche -->
-    
-            <div class="row buttons navbar-fixed-middle">
-              <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <button class="button float-right" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-              </button>
-            </div><!-- fin row buttons -->
+
+
+  
             </header>
 <!-- Contenu affiché après clic sur le bouton de menu -->
             <section>
 
+
             
             <div class="collapse justify-content-center col-12" id="Informations">
-              <div class="card">
+              <div class="card h-100">
                 <h4>À propos</h4>
                 <span class="text-muted">Générateur aléatoire de citations</span>
                 <p class="text-muted">
-                Cette page présente une utilisation des 'apis' de Wikiquote.org dans le cadre d'un exercice 
-                du programme freecodecamp.org.
+                'Random Quote Machine'
+    Cet exercice est le premier dans la série des 'Intermediate Development Projects'
+    du programme freecodecamp.org.
+    Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX),
+    il s'agit de composer une page présentant aléatoirement des citations provenant d'une api
+    fournissant un fichier .json.
+    À la recherche d'une ressource en français, évocatrice et familière, mon choix s'est porté
+    sur la page wikiquote 'Carnac', une présentation d'extraits du poème de Guillevic.
+    Ce choix sensé, sensible et sensuel n'a pas été sans suite :
+    - par sa présentation particulière (une succession de balises <span> encadrant les extraits)
+    - par l'exhaustivité et la complexité de la documentation de l'api Wikimedia.
+    Le débutant s'est très vite égaré dans les méandres du CORS et de JSONP.
+    La bibliothèque Wikiblurb de Ian C. (https://github.com/9bitStudios/wikiblurb/) a permis
+    une résolution de l'exercice sans trop de dommages et d'inélégance.
+
+    La poésie crée son propre espace, rare et indispensable. 
+    J'espère que vous apprécierez l'environnement que façonnent et explorent les mots de Guillevic 
+    (né à Carnac, il y a 110 ans), que vous y retournerez.
+    L'ensemble de son œuvre poétique est publiée chez Gallimard.
+    http://www.gallimard.fr/Catalogue/GALLIMARD/Poesie-Gallimard/Sphere-suivi-de-Carnac
+    https://www.librairiedialogues.fr/livre/530239-sphere-carnac-eugene-guillevic-gallimard 
+    (10,90€, 177 grammes)
+
+    Des modifications ont dû être apportées au code Wikiblurb :
+    url de la source, retrait d'opérations non pertinentes, enregistrement des données dans un tableau.
                 </p>
                 <p class="text-muted">Les extraits du poème <em>Carnac</em> sont consultables 
                   <a href="https://fr.wikiquote.org/wiki/Carnac" alt="page Wikiquote du poème Carnac">sur cette page Wikiquote.fr</a>
                 </p>
                 <p class="text-muted">Ils sont reproduits dans le cadre de la licence Creative Commons CC-BY-SA de Wikipedia.</p>
+                <p>              <a class="button" id="tweeter" title="Partagez cet extrait sur Tweeter" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              </p>
               </div>
             </div>
 
 <!-- Contenu généré par Wikiquote - poème -->
-            <div class="card justify-content-center">
-              <div class="card-body col-12" id="poeme">
+            <div class="card">
+              <div class="card-body col-8" id="poeme">
                 <div class="" id="poemes">                
                 </div><!-- fin poème -->
               </div><!-- fin card-body -->
             </div><!-- fin card -->
             </section>
           </div><!-- fin col -->
+          <div class="col-1">
+                 <button class="button" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
+                <span class="sr-only">Les mots s'accordent...</span></a>
+              </button>
+
+          </div>
         </div><!-- fin row -->
 
+  <!--      <div class="row" id="sidebar">
+     <button class="button float-right" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+              </button>
+        </div> -->
 
       </div><!-- fin container -->
 

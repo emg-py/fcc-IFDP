@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 
-/* Adapter la taille de police à celle de l'écran - tentative */
+/* Adapter la taille de police à celle de l'écran - tentative 
 @media (max-width: @screen-xs) {
     body{font-size: 1rem;}
     .container {width: 100vw; background: blue;}
@@ -21,9 +21,9 @@ body {
 @media (max-width: @screen-sm) {
     body{font-size: 1.4rem;}
 }
-
+*/
 .container {
-  width: 62vh;
+  width: 72vh;
   height: 100vh;
 }
 
@@ -62,8 +62,7 @@ z-index: 1234;
       position: absolute;
       z-index: 1000;
       overflow-y: auto;
-      width: 100%;
-      height: auto !important;
+      width: 95%;
 }
 
 .col-12 {
@@ -77,6 +76,7 @@ z-index: 1234;
   min-height: 93vh;
   padding-top: 100%; /* 1:1.5 'Aspect Ratio' d'un recueil */
   position: relative;
+  margin-left: 30%;
 }
 
 .card-body {
@@ -87,6 +87,34 @@ z-index: 1234;
   right: 0;
 }
 
-#nouvelExtrait {
-
+#fleche {
+  font-size: 3rem;
 }
+
+/* faire tourner l'icône au survol par la souris depuis 
+https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hover
+*/
+
+.fa {
+  color: gray-500;
+}
+
+.fa.fa-refresh:hover {  
+    -webkit-animation: infinite-spinning 1s ease-out 0s infinite normal;
+    animation: infinite-spinning 1s ease-out 0s infinite normal;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#nouvelExtrait {
+  margin-top: 33vh;
+  background: none;
+  border: none;
