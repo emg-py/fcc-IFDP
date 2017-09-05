@@ -32,10 +32,10 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: "http://fr.wikiquote.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Carnac&callback=?",
+        url: "https://fr.wikiquote.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Carnac&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
-        dataType: "json",
+        dataType: "jsonp",
         success: function (data, textStatus, jqXHR) {
  
             var markup = data.parse.text["*"];
@@ -83,7 +83,7 @@ $(document).ready(function () {
     $.fn.wikiblurb = function (options) {
 
         var defaults = $.extend({
-            wikiURL: "http://fr.wikiquote.org/",
+            wikiURL: "https://fr.wikiquote.org/",
             apiPath: 'w',
             section: 0,
             pageid: 'Carnac',
