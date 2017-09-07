@@ -69,11 +69,17 @@ color: #000;
 #Informations {
       position: absolute;
       z-index: 1000;
-      height: 92vh;
+      height: 91vh;
       overflow: scroll;
       padding: 2vh;
       margin: 1vh;
       background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .button {
@@ -108,9 +114,6 @@ color: #000;
 https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hover
 */
 
-.fa {
-  color: gray-500;
-}
 
 .fa.fa-refresh:hover {  
     -webkit-animation: infinite-spinning 1s ease-out 0s infinite normal;
