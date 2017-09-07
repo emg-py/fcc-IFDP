@@ -69,7 +69,7 @@ color: #000;
 #Informations {
       position: absolute;
       z-index: 1000;
-      height: 93vh;
+      height: 92vh;
       overflow: scroll;
       padding: 2vh;
       margin: 1vh;
