@@ -63,6 +63,12 @@ $(document).ready(function () {
         
 
 });
+  /* Tweeter script */
+    $('#tweeter').unbind("click");
+    $('#tweeter').on("click",function(){
+     window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(' #poeme')  );
+     return false;
+ });
 });
 
 /* La bibliothèque qui sauve. Merci IAN !

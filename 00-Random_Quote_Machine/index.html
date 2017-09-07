@@ -31,8 +31,8 @@
     </head>
     <body>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-10 justify-content-center">
+        <div class="row">
+          <div class="col-12">
             <header id="en-tete">
 <!-- Navigation
 ================================================== -->
@@ -45,7 +45,13 @@
                 </button>              
               </div> 
               <!-- Boutons Tweeter et Flèche -->
+         <div id="nouvelExtrait">
+                 <button class="button"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
+                <span class="sr-only">Les mots s'accordent...</span></a>
+              </button>
 
+          </div>
 
   
             </header>
@@ -54,37 +60,27 @@
 
 
             
-            <div class="collapse justify-content-center col-12" id="Informations">
-              <div class="card h-100">
+            <div class="collapse justify-content-center" id="Informations">
+              <div>
                 <h4>À propos</h4>
                 <span class="text-muted">Générateur aléatoire de citations</span>
-                <p class="text-muted">
-                'Random Quote Machine'
-    Cet exercice est le premier dans la série des 'Intermediate Development Projects'
-    du programme freecodecamp.org.
-    Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX),
-    il s'agit de composer une page présentant aléatoirement des citations provenant d'une api
-    fournissant un fichier .json.
-    À la recherche d'une ressource en français, évocatrice et familière, mon choix s'est porté
-    sur la page wikiquote 'Carnac', une présentation d'extraits du poème de Guillevic.
-    Ce choix sensé, sensible et sensuel n'a pas été sans suite :
-    - par sa présentation particulière (une succession de balises <span> encadrant les extraits)
-    - par l'exhaustivité et la complexité de la documentation de l'api Wikimedia.
-    Le débutant s'est très vite égaré dans les méandres du CORS et de JSONP.
-    La bibliothèque Wikiblurb de Ian C. (https://github.com/9bitStudios/wikiblurb/) a permis
-    une résolution de l'exercice sans trop de dommages et d'inélégance.
+                        <h2>'Random Quote Machine'</h2>
+    				<h4>Premier exercice dans la série des 'Intermediate Development Projects' du programme freecodecamp.org.</h4>
+    				<p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant aléatoirement des citations provenant d'une api fournissant un fichier .json.</p>
+    				<p>À la recherche d'une ressource en français, évocatrice et familière, mon choix s'est porté sur la page wikiquote <a href="https://fr.wikiquote.org/wiki/carnac" alt="Lien vers la page Wikiquote présentant des extraits du poème d'Eugène Guillevic">Carnac</a>, une présentation d'extraits du poème de Guillevic.</p>
+    				<p>Ce choix sensé, sensible et sensuel n'a pas été sans suite : - par sa présentation particulière (une succession de balises &lt;span&gt; encadrant les extraits) - par l'exhaustivité et la complexité de la documentation de l'api Wikimedia.</p>
+    				<p>Le débutant s'est très vite égaré dans les méandres du CORS et de JSONP. Quand la bibliothèque <a href="https://github.com/9bitStudios/wikiblurb/" alt="Wikiblurb sur GitHub.com">Wikiblurb</a> de Ian C. et <a href="http://www.9bitstudios.com/" alt="la page d'accueil du studio 9bit">9bitStudios</a> a permis une résolution de l'exercice sans trop de dommages et d'inélégance.</p>
 
-    La poésie crée son propre espace, rare et indispensable. 
-    J'espère que vous apprécierez l'environnement que façonnent et explorent les mots de Guillevic 
-    (né à Carnac, il y a 110 ans), que vous y retournerez.
-    L'ensemble de son œuvre poétique est publiée chez Gallimard.
-    http://www.gallimard.fr/Catalogue/GALLIMARD/Poesie-Gallimard/Sphere-suivi-de-Carnac
-    https://www.librairiedialogues.fr/livre/530239-sphere-carnac-eugene-guillevic-gallimard 
-    (10,90€, 177 grammes)
-
-    Des modifications ont dû être apportées au code Wikiblurb :
-    url de la source, retrait d'opérations non pertinentes, enregistrement des données dans un tableau.
-                </p>
+    				<p>La poésie crée son propre espace, rare et indispensable. J'espère que vous apprécierez l'environnement que façonnent et explorent les mots de Guillevic (né à Carnac, il y a 110 ans), que vous y retournerez.</p>
+    				<p>L'ensemble de son œuvre poétique est publiée chez Gallimard :<br/>
+    				<a href="http://www.gallimard.fr/Catalogue/GALLIMARD/Poesie-Gallimard/Sphere-suivi-de-Carnac" alt="lien vers la page de l'éditeur présentant 'Sphere <em>suivi</em> de Carnac">http://www.gallimard.fr/Catalogue/GALLIMARD/Poesie-Gallimard/Sphere-suivi-de-Carnac</a><br>
+    				<a href="https://www.librairiedialogues.fr/livre/530239-sphere-carnac-eugene-guillevic-gallimard" alt="le lien vers la page de commande de l'ouvrage sur le site web de la librairie Dialogues (Morlaix)"> https://www.librairiedialogues.fr/livre/530239-sphere-carnac-eugene-guillevic-gallimard</a> (10,90€, 177 grammes).
+ <!--   				<figure class="figure">
+    				<img src="https://ec56229aec51f1baff1d-185c3068e22352c56024573e929788ff.ssl.cf1.rackcdn.com/attachments/large/4/1/1/001408411.jpg" alt="couverture de l'ouvrage Sphere suivi de Carnac" class="img-fluid">
+    				<figcaption class="figure-caption">couverture de l'ouvrage</figcaption>
+    				</figure> -->
+    				<p>Des modifications ont dû être apportées au code Wikiblurb : url de la source, retrait d'opérations non pertinentes, enregistrement des données dans un tableau.</p>
+                
                 <p class="text-muted">Les extraits du poème <em>Carnac</em> sont consultables 
                   <a href="https://fr.wikiquote.org/wiki/Carnac" alt="page Wikiquote du poème Carnac">sur cette page Wikiquote.fr</a>
                 </p>
@@ -98,28 +94,19 @@
 
 <!-- Contenu généré par Wikiquote - poème -->
             <div class="card">
-              <div class="card-body col-8" id="poeme">
-                <div class="" id="poemes">                
+              <div class="card-body" id="poeme">
+                <div class="" id="poemes">
+                Toi, ce creux<br/>
+				Et définitif<br/><br/>
+
+				Moi qui rêvais<br/>
+				De faire équilibre.                
                 </div><!-- fin poème -->
               </div><!-- fin card-body -->
             </div><!-- fin card -->
             </section>
           </div><!-- fin col -->
-          <div class="col-1">
-                 <button class="button" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
-                <span class="sr-only">Les mots s'accordent...</span></a>
-              </button>
-
-          </div>
         </div><!-- fin row -->
-
-  <!--      <div class="row" id="sidebar">
-     <button class="button float-right" id="nouvelExtrait"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-              </button>
-        </div> -->
-
       </div><!-- fin container -->
 
 
@@ -129,7 +116,8 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"</script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"</script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="
+      sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
       <script type="text/javascript" src="RQM.js"></script>
     </body>
   </html>

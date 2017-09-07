@@ -22,15 +22,28 @@ body {
     body{font-size: 1.4rem;}
 }
 */
+
 .container {
-  width: 72vh;
+  width: 56vh;
   height: 100vh;
+  padding: 0;
 }
+
+@media (max-width: 767px) {
+   .container {
+      width: 100%;
+   }
+}
+
+
+.col-12 {
+      padding: 0;
+}
+
 
 /* la barre 'header' */
 .en-tete {
   display: flex;
-  position: relative;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -47,11 +60,6 @@ white-space: nowrap;
 color: #000;
 }
 
-.buttons {
-z-index: 1234;
-    position: sticky;
-}
-
 .fa-bars {
   font-size: 2rem;
   margin-right: 1rem;
@@ -61,22 +69,27 @@ z-index: 1234;
 #Informations {
       position: absolute;
       z-index: 1000;
-      overflow-y: auto;
-      width: 95%;
+      height: 93vh;
+      overflow: scroll;
+      padding: 2vh;
+      margin: 1vh;
+      background-color: #fff;
 }
 
-.col-12 {
-      padding: 0;
+.button {
+  background-color: #fff;
+  border: 0;
 }
-
 
 
 #poeme {
+  font-size: 1.5rem;
   width: 100%;
-  min-height: 93vh;
-  padding-top: 100%; /* 1:1.5 'Aspect Ratio' d'un recueil */
+  height: 93vh;
+/*  padding-top: 100%;  1:1.5 'Aspect Ratio' d'un recueil */
   position: relative;
-  margin-left: 30%;
+  padding-left: 30%;
+  padding-top: 30vh;
 }
 
 .card-body {
@@ -88,7 +101,7 @@ z-index: 1234;
 }
 
 #fleche {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* faire tourner l'icône au survol par la souris depuis 
@@ -115,6 +128,11 @@ https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hov
 }
 
 #nouvelExtrait {
-  margin-top: 33vh;
+  position: absolute;
   background: none;
   border: none;
+  margin-top: 30vh;
+  right: 20px;
+  z-index: 990;
+}
+
