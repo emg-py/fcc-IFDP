@@ -54,21 +54,19 @@ $(document).ready(function () {
             // tous les extraits identitifiés dans la page alimentent le tableau citations
             citations.push($(blurb).find('span'));
 
-            $("#poeme").html(citations[0][Math.floor(Math.random() * citations[0].length)]);
-
+            var extrait = (citations[0][Math.floor(Math.random() * citations[0].length)]);
+            // convertir l'objet 'extrait' en texte accepté par Tweeter...
+            var extraitTweet = $(extrait).html();
+            $("#twitter-button").attr('href', 'https://twitter.com/intent/tweet?hashtags=Guillevic&text="' + extraitTweet);
+            $("#poeme").html(extrait);
+         //   console.log(extrait);
+         //   console.log(extraitTweet);
+            
+      
 
         },
         error: function (errorMessage) {
         }
-/*
-    function tweeter() {
-        var twitterURL = 'https://twitter.com/intent/tweet?hashtags=Guillevic&text="';
-        var quote = $("#poeme").text();
-        twitterURL +=quote;
-        
-        $('#tweet').attr('href', twitterURL);
-}
-*/
     });
         
 

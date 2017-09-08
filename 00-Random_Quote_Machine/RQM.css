@@ -88,6 +88,9 @@ ul {
   border: 0;
 }
 
+.button:focus, .button:active {
+outline: none !important;
+}
 
 #poeme {
   font-size: 1.5rem;
@@ -95,8 +98,13 @@ ul {
   height: 93vh;
 /*  padding-top: 100%;  1:1.5 'Aspect Ratio' d'un recueil */
   position: relative;
-  padding-left: 30%;
+  padding-left: 27%;
   padding-top: 30vh;
+}
+
+#couv {
+  max-height: 90%;
+  transform: translate(-5vh, -30%);
 }
 
 .card-body {
@@ -105,6 +113,10 @@ ul {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+#tweet {
+  font-size: 1.5rem;
 }
 
 #fleche {
@@ -132,7 +144,7 @@ https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hov
   }
 }
 
-#nouvelExtrait {
+#boutons {
   position: absolute;
   background: none;
   border: none;

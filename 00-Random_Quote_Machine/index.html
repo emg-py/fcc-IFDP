@@ -43,16 +43,20 @@
                 </button>              
               </div> 
               <!-- Boutons Tweeter et Flèche -->
-         <div id="nouvelExtrait">
-                 <button class="button"><a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
-                <span class="sr-only">Les mots s'accordent...</span></a>
-              </button>
-         <br>
-              <a class="button" id="tweet" title="Partagez cet extrait sur Tweeter" target="_blank">
+              <div id="boutons">
+                 <button class="button" id="nouvelExtrait">
+                   <a class="button" id="fleche" title="un nouvel extrait" target="_blank">
+                   <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
+                   <span class="sr-only">Les mots s'accordent...</span></a>
+                 </button><br>
+                 <button class="button" id="tweet">
+                    <a class="button" id="twitter-button" title="Partagez cet extrait sur Tweeter" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                 </button>
+<!--              <a class="button" id="tweet" title="Partagez cet extrait sur Tweeter" target="_blank">
                 <i class="fa fa-twitter"></i>
               </a>
-            
+  -->          
           </div>
 
   
@@ -96,11 +100,17 @@
             <div class="card">
               <div class="card-body" id="poeme">
                 <div class="" id="poemes">
-                Toi, ce creux<br/>
+                <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
+                Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation
+                de la couverture de l'ouvrage en 'une' -->
+                <figure class="figure" id="couv">
+            <img src="img/Carnac.jpg" alt="couverture de l'ouvrage Sphere suivi de Carnac" class="img-fluid">
+            </figure>
+<!--                Toi, ce creux<br/>
 				Et définitif<br/><br/>
 
 				Moi qui rêvais<br/>
-				De faire équilibre.                
+				De faire équilibre.       -->         
                 </div><!-- fin poème -->
               </div><!-- fin card-body -->
             </div><!-- fin card -->
