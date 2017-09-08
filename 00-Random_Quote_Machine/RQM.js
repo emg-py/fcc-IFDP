@@ -56,19 +56,24 @@ $(document).ready(function () {
 
             $("#poeme").html(citations[0][Math.floor(Math.random() * citations[0].length)]);
 
+
         },
         error: function (errorMessage) {
         }
+/*
+    function tweeter() {
+        var twitterURL = 'https://twitter.com/intent/tweet?hashtags=Guillevic&text="';
+        var quote = $("#poeme").text();
+        twitterURL +=quote;
+        
+        $('#tweet').attr('href', twitterURL);
+}
+*/
     });
         
 
 });
-  /* Tweeter script */
-    $('#tweeter').unbind("click");
-    $('#tweeter').on("click",function(){
-     window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(' #poeme')  );
-     return false;
- });
+
 });
 
 /* La bibliothèque qui sauve. Merci IAN !
