@@ -36,64 +36,69 @@
   ================================================== -->
                 <div class="en-tete align-items-center">
                   <h1 class="titre">
-                    <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-center" alt="#en-tete"> Guillevic <em>Carnac</em>
+                    <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-center" alt="#en-tete"> <em>Lecteur Wikipedia </em>
                   </h1>
                   <button class="btn fa fa-bars" type="button" data-toggle="collapse" data-target="#Informations" aria-expanded="false" aria-controls="Informations">
                   
                   </button>              
-                </div> 
-                <!-- Boutons Tweeter et Flèche -->
-                <div id="boutons">
-                   <button class="button" id="nouvelExtrait">
-                     <a class="button" id="fleche" title="un nouvel extrait" target="_blank">
-                     <i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i>
-                     <span class="sr-only">Les mots s'accordent...</span></a>
-                   </button><br>
-                   <button class="button" id="tweet">
-                      <a class="button" id="twitter-button" title="Partagez cet extrait sur Tweeter" target="_blank">
-                      <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                   </button>
-                </div>
-              </header>
+                </div><!-- fin en-tête -->
+
+                              
+
+   
+
+
+              
+                                                 <!-- Boutons Tweeter et Flèche -->
+                <div id="boutons" class="en-tete align-items-center">
+                <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group" role="group" aria-label="First group">
+    <a class="" href="https://fr.wikipedia.org/wiki/Special:Random" target="_blank">
+          <button type="button" class="btn btn-secondary">Cliquez sur ce lien pour accéder aléatoirement à un article
+          </button>
+        </a>
+  </div>
+                <div class="input-group">
+    <span class="input-group-addon" id="boutonRechercher"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" class="form-control" placeholder="rechercher sur Wikipedia" aria-describedby="btnGroupAddon2">
+  </div>
+ <!--     <button type="submit" class="btn btn-default searchSubmit" id="boutonRechercher">
+      <input type="text" class="search_box" id="valeurRecherchee" placeholder="rechercher sur Wikipedia">
+        
+      </button>-->
+                
+                </div><!-- fin boutons -->
+                              </header>
+                </div><!-- fin col-12 -->
+                </div><!-- fin row -->
+<div class="row">
+<div class="col-12">
   <!-- Contenu affiché après clic sur le bouton de menu -->
               <section>
               <div class="collapse justify-content-center" id="Informations">
                 <div>
                   <h4>À propos</h4>
-                  <span class="text-muted">Générateur aléatoire de citations</span>
-                  <h3>'Random Quote Machine'</h3>
-      				    <h5>Premier exercice dans la série des '<a href="https://www.freecodecamp.org/challenges/build-a-random-quote-machine" alt="Build a Random Quote Machine">Intermediate Development Projects</a>' du programme <a href="https://www.freecodecamp.org" alt="freeCodeCamp - learn to code for free">freecodecamp.org</a>.</h5>
-      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant aléatoirement des citations provenant d'une api fournissant un fichier .json.</p>
-          				<p>À la recherche d'une ressource en français, évocatrice et familière, mon choix s'est porté sur la page wikiquote <a href="https://fr.wikiquote.org/wiki/carnac" alt="Lien vers la page Wikiquote présentant des extraits du poème d'Eugène Guillevic">Carnac</a>, une présentation d'extraits du poème de Guillevic.</p>
-      				      <ul>
-      				        <li>Ce choix sensé, sensible et sensuel n'a pas été sans suites :</li>
-      				        <li>- par la présentation singulière de cette page (une succession de balises &lt;span&gt; encadrant les extraits pertinents),</li>
-            				  <li>- par l'exhaustivité et la complexité de la documentation de l'api Wikimedia.</li>
-        	    			</ul>
-      			    	</p>
-          				<p>Le débutant s'est très vite égaré dans les méandres du CORS et de JSONP. Quand la bibliothèque <a href="https://github.com/9bitStudios/wikiblurb/" alt="Wikiblurb sur GitHub.com">Wikiblurb</a> de Ian C. et <a href="http://www.9bitstudios.com/" alt="la page d'accueil du studio 9bit">9bitStudios</a> a permis une résolution de l'exercice sans trop de dommages et d'inélégance.</p>
-
-      	    			<p>La poésie crée son propre espace, rare et indispensable. J'espère que vous apprécierez l'environnement que façonnent et explorent les mots de Guillevic (né à Carnac, il y a 110 ans), que vous y retournerez.</p>
-      			    	<p>Son œuvre poétique est publiée chez <a href="http://www.gallimard.fr/Catalogue/GALLIMARD/Poesie-Gallimard/Sphere-suivi-de-Carnac" alt="lien vers la page de l'éditeur présentant 'Sphere <em>suivi</em> de Carnac">Gallimard</a>, <em>Carnac</em> est disponible à la 
-      			    	<a href="https://www.librairiedialogues.fr/livre/530239-sphere-carnac-eugene-guillevic-gallimard" alt="le lien vers la page de commande de l'ouvrage sur le site web de la librairie Dialogues (Morlaix)"> librairie Dialogues </a> (10,90€, 177 grammes).
-
-          				<p>Des modifications ont dû être apportées au code Wikiblurb : url de la source, dataType, commentaire d'opérations non pertinentes, tri et enregistrement des données dans un tableau.</p>
-                  
-                  <p class="text-muted">Les extraits du poème <em>Carnac</em> sont consultables 
-                    <a href="https://fr.wikiquote.org/wiki/Carnac" alt="page Wikiquote du poème Carnac">sur cette page Wikiquote.fr</a>. Ils sont reproduits dans le cadre de la <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" alt="licence Creative Commons CC-BY-SA fr">licence Creative Commons CC-BY-SA</a> de <a href="https://fr.wikiquote.org/wiki/Wikiquote:Accueil" alt="la page d'accueil wikiquote.fr">Wikiquote</a>.</p>
+                  <span class="text-muted">lecteur Wikipedia</span>
+                  <h3>'Wikipedia viewer'</h3>
+      				    <h5>Troisième exercice dans la série des '<a href="https://www.freecodecamp.org/challenges/build-a-wikipedia-viewer" alt="Build a Wikipedia viewer">Intermediate Development Projects</a>' du programme <a href="https://www.freecodecamp.org" alt="freeCodeCamp - learn to code for free">freecodecamp.org</a>.</h5>
+      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit une liste d'articles correspondant à une recherche entrée dans un formulaire.</p>
+          				<p>Les recherches seront effectuées sur la version française de l'encyclopédie au moyen de l'api Wikimedia.</p>
+      				    
                 </div>
               </div>
   <!-- Contenu généré par Wikiquote - poème -->
               <div class="card">
                 <div class="card-body" id="poeme">
-                  <div class="" id="poemes">
+                  <div class="" id="recherches">
+                                    
+                  <div class="" id="resultatsAfficher"></div>
                   <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
                   Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation
                   de la couverture de l'ouvrage en 'une' -->
-                  <figure class="figure" id="couv">
-                    <img src="img/Carnac.jpg" alt="couverture de l'ouvrage Sphere suivi de Carnac" class="img-fluid">
+             <!--    <figure class="figure" id="couv">
+                    <img src="img/Carnac.jpg" alt="" class="img-fluid">
                   </figure>
-           
+           -->
                   </div><!-- fin poème -->
                 </div><!-- fin card-body -->
               </div><!-- fin card -->

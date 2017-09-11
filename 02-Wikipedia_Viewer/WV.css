@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 56vh;
+  width: 80vh;
   height: 100vh;
   padding: 0;
 }
@@ -83,13 +83,12 @@ outline: none !important;
 }
 
 #poeme {
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 100%;
   height: 93vh;
 /*  padding-top: 100%;  1:1.5 'Aspect Ratio' d'un recueil */
   position: relative;
-  padding-left: 27%;
-  padding-top: 30vh;
+  overflow: scroll;
 }
 
 #couv {
@@ -135,11 +134,8 @@ https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hov
 }
 
 #boutons {
-  position: absolute;
   background: none;
   border: none;
-  margin-top: 30vh;
-  right: 20px;
   z-index: 990;
 }
 
