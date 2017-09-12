@@ -34,13 +34,18 @@ $(document).ready(function() {
           exlimit: 20,
         })
         .done(function(response) {
-          console.log(response);
+          if (response.query === undefined) {
+            $('#resultatsAfficher').html("<div class='erreur'>Votre demande n'a fourni aucun résultat.<br>Merci de la reformuler.</div>");
+          } else
+          {
           response.query.pages.forEach(function(resp) {
             $('#resultatsAfficher').append(
-              "<a href='" + resp.fullurl + "' target= '_blank'><div id='result' class='results'><h3>" + resp.title + "</h3></a><p = class='extract'>" + resp.extract + "</p></div>");
+              "<a href='" + resp.fullurl + "' target= '_blank'><div id='resultat' class='resultats'><h3>" + resp.title + "</h3></a><p = class='extrait'>" + resp.extract + "</p></div>");
           })
+        }
         });
-    }); // search
+
+    }); // recherche
 
 });
 

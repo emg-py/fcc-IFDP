@@ -1,6 +1,6 @@
 
-/* RQM.css
-Pour le projet Guillevic - Carnac
+/* WV.css
+Pour le projet lecteur Wikipedia
 */
 body {
     font-family: 'EB Garamond', serif;
@@ -22,6 +22,10 @@ body {
 @media (max-width: 767px) {
    .container {
       width: 100%;
+   }
+   /* occupation de toute la largeur sur petits écrans */
+   .row {
+      margin: 0;
    }
 }
 
@@ -60,11 +64,24 @@ body {
 #Informations {
       position: absolute;
       z-index: 1000;
-      height: 91vh;
+      height: 85vh;
       overflow: scroll;
       padding: 2vh;
       margin: 1vh;
       background-color: #fff;
+}
+
+.erreur {
+  font-size: 2em;
+  margin: 20 auto;
+}
+
+.extrait {
+
+}
+
+#resultat {
+
 }
 
 ul {
@@ -94,6 +111,10 @@ outline: none !important;
 #couv {
   max-height: 90%;
   transform: translate(-5vh, -30%);
+}
+
+.card {
+  height: 90vh;
 }
 
 .card-body {
