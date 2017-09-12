@@ -32,7 +32,7 @@ body {
    .container {
       width: 100%;
    }
-      /* occupation de toute la largeur sur petits écrans */
+/* occupation de toute la largeur sur petits écrans */
    .row {
       margin: 0;
    }
