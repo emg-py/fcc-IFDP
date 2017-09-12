@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>météo locale</title>
+    <meta name="description" content="un exercice du programme freeCodeCamp">
+    <meta name="author" content="py">
+<!-- favicon.ico 16x16px in the icons folder -->
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<!-- the code for all sorts of modern icons, to save in an img or icon folder :
+     third-generation iPad with high-resolution Retina display: -->
+     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/favicon144.png">
+<!-- iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/favicon114.png">
+<!-- first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/favicon72.png">
+<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="icons/favicon57.png">
+<!-- basic favicon -->
+    <link rel="shortcut icon" href="icons/favicon32.png">
+<!-- fichiers css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="SLW.css">
+<!-- Fichiers de script, bien noter la balise fermante -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Libre+Baskerville" rel="stylesheet">
+    </head>
+      <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <header id="en-tete">
+  <!-- Navigation
+  ================================================== -->
+                <div class="en-tete align-items-center">
+                  <h1 class="titre">
+                    <img src="img/favicon144.png" width="30" height="30" class="d-inline-block align-center" alt="#en-tete"> <em>Météo locale</em>
+                  </h1>
+                  <button class="btn fa fa-bars" type="button" data-toggle="collapse" data-target="#Informations" aria-expanded="false" aria-controls="Informations">
+                  
+                  </button>              
+                </div><!-- fin en-tête -->
+
+                              
+
+   
+
+
+              
+                                                 <!-- Boutons Tweeter et Flèche -->
+                <div id="boutons" class="en-tete align-items-center">
+                <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                  <div class="btn-group" role="group" aria-label="First group">
+    <a class="" href="https://fr.wikipedia.org/wiki/Special:Random" target="_blank">
+          <button type="button" class="btn btn-secondary">Cliquez sur ce lien pour accéder aléatoirement à un article
+          </button>
+        </a>
+  </div>
+                <div class="input-group">
+    <span class="input-group-addon" id="boutonRechercher"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <input type="text" class="form-control" placeholder="rechercher sur Wikipedia" aria-describedby="btnGroupAddon2">
+  </div>
+ <!--     <button type="submit" class="btn btn-default searchSubmit" id="boutonRechercher">
+      <input type="text" class="search_box" id="valeurRecherchee" placeholder="rechercher sur Wikipedia">
+        
+      </button>-->
+                
+                </div><!-- fin boutons -->
+                              </header>
+                </div><!-- fin col-12 -->
+                </div><!-- fin row -->
+<div class="row">
+<div class="col-12">
+  <!-- Contenu affiché après clic sur le bouton de menu -->
+              <section>
+              <div class="collapse justify-content-center" id="Informations">
+                <div>
+                  <h4>À propos</h4>
+                  <span class="text-muted">Météo locale/span>
+                  <h3>'Show Local Weather'</h3>
+      				    <h5>Second exercice dans la série des '<a href="https://www.freecodecamp.org/challenges/show-the-local-weather" alt="Show the Local Weather">Intermediate Development Projects</a>' du programme <a href="https://www.freecodecamp.org" alt="freeCodeCamp - learn to code for free">freecodecamp.org</a>.</h5>
+      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit une liste d'articles correspondant à une recherche entrée dans un formulaire.</p>
+          				<p>Les recherches seront effectuées sur la version française de l'encyclopédie au moyen de l'api Wikimedia.</p>
+      				    
+                </div>
+              </div>
+  <!-- Contenu généré par Wikiquote - poème -->
+              <div class="card">
+                <div class="card-body" id="poeme">
+                  <div class="" id="recherches">
+                                    
+                  <div class="" id="resultatsAfficher"></div>
+                  <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
+                  Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation
+                  de la couverture de l'ouvrage en 'une' -->
+             <!--    <figure class="figure" id="couv">
+                    <img src="img/Carnac.jpg" alt="" class="img-fluid">
+                  </figure>
+           -->
+                  </div><!-- fin poème -->
+                </div><!-- fin card-body -->
+              </div><!-- fin card -->
+              </section>
+            </div><!-- fin col -->
+          </div><!-- fin row -->
+        </div><!-- fin container -->
+
+
+
+
+  <!-- chargement des scripts Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="
+        sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="SLW.js"></script>
+      </body>
+    </html>

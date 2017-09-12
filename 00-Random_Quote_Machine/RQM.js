@@ -7,21 +7,26 @@
     il s'agit de composer une page présentant aléatoirement des citations provenant d'une api
     fournissant un fichier .json.
 */
-$(document).ready(function () {
-  $("#nouvelExtrait").click(function () {
-    var citations = [];
 
-    $.ajax({
+/* 
+    Mise en cache des données pour limiter les appels vers Wikiquote 
+    https://stackoverflow.com/questions/17379312/cache-json-response 
+*/
+$(document).ready(function () {
+  var citations =[];
+//  console.log(citations);
+  $("#nouvelExtrait").click(function () {
+
+    if (citations[0] === undefined)     $.ajax({
         type: "GET",
         url: "https://fr.wikiquote.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Carnac&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
-        dataType: "jsonp",
+        dataType: "json",
+        cache: true,
         success: function (data, textStatus, jqXHR) {
- 
             var markup = data.parse.text["*"];
             var blurb = $('<span class="citation"></span>').html(markup);
-            
 /* Paramètres non pertinents
             remove links as they will not work
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
@@ -31,24 +36,31 @@ $(document).ready(function () {
  */
             // retirer les 'précisions' sur le texte (<span class="precisions"></span>)
             blurb.find('.precisions').remove();
-            
+//            console.log(citations);
             // tous les extraits identitifiés dans la page alimentent le tableau citations
             citations.push($(blurb).find('span'));
-
+//            console.log(citations);
             var extrait = (citations[0][Math.floor(Math.random() * citations[0].length)]);
             // convertir l'objet 'extrait' en texte accepté par Tweeter...
             var extraitTweet = $(extrait).html();
             $("#twitter-button").attr('href', 'https://twitter.com/intent/tweet?hashtags=Guillevic&text="' + extraitTweet);
             $("#poeme").html(extrait);
-         //   console.log(extrait);
-         //   console.log(extraitTweet);
-        },
-        error: function (errorMessage) {
+//            console.log(extrait);
         }
-    });
-});
 
 });
+else 
+{
+//            console.log(citations);
+            var extrait = (citations[0][Math.floor(Math.random() * citations[0].length)]);
+            // convertir l'objet 'extrait' en texte accepté par Tweeter...
+            var extraitTweet = $(extrait).html();
+            $("#twitter-button").attr('href', 'https://twitter.com/intent/tweet?hashtags=Guillevic&text="' + extraitTweet);
+            $("#poeme").html(extrait);
+}
+});
+});
+
 
 /* La bibliothèque qui sauve. Merci IAN !
 
