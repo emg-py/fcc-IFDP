@@ -73,14 +73,18 @@
 
                                     
                   <div class="" id="resultatsAfficher">
-                                      <p>Cette page nécessite votre accord pour accéder aux données de géolocalisation de votre navigateur (très imprécises apparemment) et vous présenter un bulletin météorologique dans votre région.</p>
-                  <p>Merci de valider cet accord en cliquant sur ce bouton </p>
-                  <button class="btn btn-secondary" type="submit" id="geoLocation">accepter la géolocalisation</button>
+                    <p>Cette page nécessite votre accord pour accéder aux données de géolocalisation de votre navigateur (très imprécises apparemment) et vous présenter un bulletin météorologique sommaire (très sommaire) dans votre région.</p>
+                    <p>Merci de valider cet accord en cliquant sur ce bouton </p>
+                    <button class="btn btn-secondary" type="submit" id="geoLocation">accepter la géolocalisation</button>
 
                   </div>
                   <div class="" id="icone"></div>
 
-                  <div class="" id="temperature"></div>
+                  <div class="" >
+                    <p id="temperature"></p>
+                    <p style="display: none" id="fahrenheit"></p>
+                    <button class="btn btn-primary" type="submit" id="modifTemp">°C /°F</button>
+                  </div>
 
      <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
                   Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation

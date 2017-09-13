@@ -82,6 +82,10 @@ ul {
 outline: none !important;
 }
 
+#icone {
+  height: 4rem;
+}
+
 #poeme {
   font-size: 1rem;
   width: 100%;

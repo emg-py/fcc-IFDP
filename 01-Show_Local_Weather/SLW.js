@@ -39,7 +39,7 @@ $(document).ready(function() {
       // la longueur de la liste 'weather' varie, la référence de l'icône est indiquée dans le dernier élément (0,1, 2 ou 3)
       var refIcone = response.weather.length - 1;
       console.log(refIcone); 
-          $("#icone").html('<img src="http://openweathermap.org/img/w/' + response.weather[refIcone].icon + '.png" alt="icone météo"></img>');
+          $("#icone").html('<img src="http://openweathermap.org/img/w/' + response.weather[refIcone].icon + '.png" class="img-responsive" alt="icone météo"></img>');
 
       /* Calcul température en °F / °C */
           console.log(response);
@@ -48,9 +48,11 @@ $(document).ready(function() {
           var tempC = Math.round(response.main.temp) + "°C";
           console.log(tempF);
 
-          $("#temperature").html("La température extérieure est éstimée à : " + tempC + ", soit : " + tempF);
-          $("#farhenheit").html(tempF);
-
+          $("#temperature").html("La température extérieure est estimée à : " + tempC);
+          $("#fahrenheit").html("La température extérieure est estimée à : " + tempF);
+          $("#modifTemp").click(function() {
+            $("p").toggle();
+          });
 
 //  soit : " + (response.main.temp * (9/5) + 32) + " °F"
         });
