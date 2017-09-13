@@ -15,12 +15,12 @@ une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit
 var apiURL = "https://fcc-weather-api.glitch.me/api/current?";
 
 $(document).ready(function() {
-/* validation d'une recherche par un retour chariot */
+/* validation d'une recherche par un retour chariot *
     $("input").keyup(function(event) {
       if (event.keyCode == 13) {
         $("#boutonRechercher").click();
       }
-    });
+    });*/
 
 
 
@@ -42,13 +42,14 @@ $(document).ready(function() {
           $("#icone").html('<img src="http://openweathermap.org/img/w/' + response.weather[refIcone].icon + '.png" alt="icone météo"></img>');
 
       /* Calcul température en °F / °C */
-console.log(response);
+          console.log(response);
           var tempF = response.main.temp * (9/5) + 32;
-          tempF = Math.round(tempF);
-          var tempC = Math.round(response.main.temp);
+          tempF = Math.round(tempF) + "°F";
+          var tempC = Math.round(response.main.temp) + "°C";
           console.log(tempF);
-          $("#temperature").html("Il fait : " + tempC + "°C");
-          $("#farhenheit").html("Il fait : " + tempF + " °F");
+
+          $("#temperature").html("La température extérieure est éstimée à : " + tempC + ", soit : " + tempF);
+          $("#farhenheit").html(tempF);
 
 
 //  soit : " + (response.main.temp * (9/5) + 32) + " °F"

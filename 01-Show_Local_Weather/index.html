@@ -46,28 +46,6 @@
                               
 
    
-
-
-              
-                                                 <!-- Boutons Tweeter et Flèche -->
-                <div id="boutons" class="en-tete align-items-center">
-                <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group" role="group" aria-label="First group">
-    
-          <button type="button" class="btn btn-secondary" id="geoLocation">Géolocalisation par le navigateur
-          </button>
-    
-  </div>
-                <div class="input-group">
-    <span class="input-group-addon" id="boutonRechercher"><i class="fa fa-search" aria-hidden="true"></i></span>
-    <input type="text" class="form-control" placeholder="rechercher sur Wikipedia" aria-describedby="btnGroupAddon2">
-  </div>
- <!--     <button type="submit" class="btn btn-default searchSubmit" id="boutonRechercher">
-      <input type="text" class="search_box" id="valeurRecherchee" placeholder="rechercher sur Wikipedia">
-        
-      </button>-->
-                
-                </div><!-- fin boutons -->
                               </header>
                 </div><!-- fin col-12 -->
                 </div><!-- fin row -->
@@ -75,14 +53,16 @@
 <div class="col-12">
   <!-- Contenu affiché après clic sur le bouton de menu -->
               <section>
+
               <div class="collapse justify-content-center" id="Informations">
                 <div>
                   <h4>À propos</h4>
                   <span class="text-muted">Météo locale</span>
                   <h3>'Show Local Weather'</h3>
       				    <h5>Second exercice dans la série des '<a href="https://www.freecodecamp.org/challenges/show-the-local-weather" alt="Show the Local Weather">Intermediate Development Projects</a>' du programme <a href="https://www.freecodecamp.org" alt="freeCodeCamp - learn to code for free">freecodecamp.org</a>.</h5>
-      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit une liste d'articles correspondant à une recherche saisie dans un formulaire.</p>
-          				<p>Les recherches seront effectuées sur la version française de l'encyclopédie au moyen de l'api Wikimedia.</p>
+      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant au visiteur un aperçu de la météo dans la région identifiée par les informations de localisation de son navigateur.</p>
+                  <p>Une option doit permettre d'afficher la température extérieure estimée en degrés Celsius ou Fahrenheit.</p>
+          				
       				    
                 </div>
               </div>
@@ -90,31 +70,19 @@
               <div class="card">
                 <div class="card-body" id="poeme">
                   <div class="" id="recherches">
+
                                     
-                  <div class="" id="resultatsAfficher"></div>
+                  <div class="" id="resultatsAfficher">
+                                      <p>Cette page nécessite votre accord pour accéder aux données de géolocalisation de votre navigateur (très imprécises apparemment) et vous présenter un bulletin météorologique dans votre région.</p>
+                  <p>Merci de valider cet accord en cliquant sur ce bouton </p>
+                  <button class="btn btn-secondary" type="submit" id="geoLocation">accepter la géolocalisation</button>
+
+                  </div>
                   <div class="" id="icone"></div>
-                <!--  <div class="" id="temperature"></div>
--->
-<p>
-  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">°C</a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample1">°F</button>
-</p>
-<div class="row">
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-      <div class="card card-body" id ="temperature">
-       
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body" id="farhenheit">
-      </div>
-    </div>
-  </div>
-</div>
-                  <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
+
+                  <div class="" id="temperature"></div>
+
+     <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
                   Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation
                   de la couverture de l'ouvrage en 'une' -->
              <!--    <figure class="figure" id="couv">
