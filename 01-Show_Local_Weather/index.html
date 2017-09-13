@@ -53,10 +53,10 @@
                 <div id="boutons" class="en-tete align-items-center">
                 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
                   <div class="btn-group" role="group" aria-label="First group">
-    <a class="" href="https://fr.wikipedia.org/wiki/Special:Random" target="_blank">
-          <button type="button" class="btn btn-secondary">Cliquez sur ce lien pour accéder aléatoirement à un article
+    
+          <button type="button" class="btn btn-secondary" id="geoLocation">Géolocalisation par le navigateur
           </button>
-        </a>
+    
   </div>
                 <div class="input-group">
     <span class="input-group-addon" id="boutonRechercher"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -78,10 +78,10 @@
               <div class="collapse justify-content-center" id="Informations">
                 <div>
                   <h4>À propos</h4>
-                  <span class="text-muted">Météo locale/span>
+                  <span class="text-muted">Météo locale</span>
                   <h3>'Show Local Weather'</h3>
       				    <h5>Second exercice dans la série des '<a href="https://www.freecodecamp.org/challenges/show-the-local-weather" alt="Show the Local Weather">Intermediate Development Projects</a>' du programme <a href="https://www.freecodecamp.org" alt="freeCodeCamp - learn to code for free">freecodecamp.org</a>.</h5>
-      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit une liste d'articles correspondant à une recherche entrée dans un formulaire.</p>
+      				    <p>Après une introduction succincte aux fonctionnalités asynchrones de JavaScript (AJAX), il s'agit de composer une page présentant soit une page aléatoire de l'encyclopédie Wikipedia, soit une liste d'articles correspondant à une recherche saisie dans un formulaire.</p>
           				<p>Les recherches seront effectuées sur la version française de l'encyclopédie au moyen de l'api Wikimedia.</p>
       				    
                 </div>
@@ -92,6 +92,28 @@
                   <div class="" id="recherches">
                                     
                   <div class="" id="resultatsAfficher"></div>
+                  <div class="" id="icone"></div>
+                <!--  <div class="" id="temperature"></div>
+-->
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">°C</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample1">°F</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body" id ="temperature">
+       
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body" id="farhenheit">
+      </div>
+    </div>
+  </div>
+</div>
                   <!-- la fonctionnalité Tweeter attend le chargement d'un extrait être fonctionnelle.
                   Pour que l'utilisateur bénéficie de toutes les fonctionnalités de la page, présentation
                   de la couverture de l'ouvrage en 'une' -->
