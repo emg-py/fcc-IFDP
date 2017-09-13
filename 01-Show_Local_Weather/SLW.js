@@ -48,9 +48,12 @@ $(document).ready(function() {
           var tempC = Math.round(response.main.temp) + "°C";
           console.log(tempF);
 
-          $("#temperature").html("La température extérieure est estimée à : " + tempC);
-          $("#fahrenheit").html("La température extérieure est estimée à : " + tempF);
+          $("#temperature").html("La température extérieure est estimée à : " + tempC + '<br><button class="btn btn-primary" id="modifTemp"type="submit">°C /°F</button>');
+          $("#fahrenheit").html("La température extérieure est estimée à : " + tempF + '<br><button class="btn btn-primary" id="modifTempF"type="submit">°C /°F</button>');
           $("#modifTemp").click(function() {
+            $("p").toggle();
+          });
+          $("#modifTempF").click(function() {
             $("p").toggle();
           });
 
