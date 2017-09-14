@@ -83,7 +83,13 @@ outline: none !important;
 }
 
 #icone {
-  height: 4rem;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+#icone img {
+  height: 5rem;
 }
 
 #poeme {
