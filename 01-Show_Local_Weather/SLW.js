@@ -23,7 +23,7 @@ var apiURL = "https://fcc-weather-api.glitch.me/api/current?";
           $("#resultatsAfficher").html("Vous vous trouvez à proximité de " + response.name);
       // la longueur de la liste 'weather' varie, la référence de l'icône est indiquée dans le dernier élément (0,1, 2 ou 3)
       var refIcone = response.weather.length - 1;
-      //console.log(refIcone);
+      console.log(refIcone);
       if (refIcone === 0) {
         $("#icone").html('<img src=' + response.weather[0].icon + ' class="img-responsive" alt="icone météo"></img>');
       } else
