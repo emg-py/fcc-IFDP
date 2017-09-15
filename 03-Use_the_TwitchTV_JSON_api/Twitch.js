@@ -18,10 +18,10 @@ var diffuseurs = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathc
  		var diffuseurNom = data._links.self.slice(37);
 // 		console.log(diffuseurNom);
  		if (data.stream !== null) {
- 			$("#resultatsAfficher").append("<tr><td><a href='" + data.stream.channel.url +"'><img class='logo rounded' src='img/profiles/" + diffuseurNom + ".png' alt='logo' > " +data.stream.channel.display_name+ "</a> diffuse : <a class='diffuse' href='" +data.stream.channel.url+ "'>" + data.stream.channel.status +"</a></td></tr>");
+ 			$("#resultatsAfficher").append("<tr><td><a href='" + data.stream.channel.url +"'><img class='logo rounded' src='img/profils/" + diffuseurNom + ".png' alt='logo' > " +data.stream.channel.display_name+ "</a> diffuse : <a class='diffuse' href='" +data.stream.channel.url+ "'>" + data.stream.channel.status +"</a></td></tr>");
 		} else
  		{
-			$("#resultatsAfficher").append("<tr><td><a href=https://www.twitch.tv/"+ diffuseurNom +"><img class='logo rounded' src='img/profiles/" + diffuseurNom + ".png' alt='logo' > " +diffuseurNom+ "</a> est hors ligne</td></tr>");
+			$("#resultatsAfficher").append("<tr><td><a href=https://www.twitch.tv/"+ diffuseurNom +"><img class='logo rounded' src='img/profils/" + diffuseurNom + ".png' alt='logo' > " +diffuseurNom+ "</a> est hors ligne</td></tr>");
 		}
     })
   }
