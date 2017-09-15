@@ -34,6 +34,13 @@ th {
 	font-size: 2rem;
 }
 
+.table td {
+	font-size: 1.5rem;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 15vw;
+}
+
 .logo {
 	max-height: 50px;
 }
