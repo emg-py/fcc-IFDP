@@ -106,7 +106,7 @@ outline: none !important;
 }
 
 #couv {
-  max-height: 90%;
+  max-height: 50vh;
   transform: translate(-5vh, -30%);
 }
 

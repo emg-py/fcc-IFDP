@@ -29,7 +29,18 @@ body {
       padding: 0;
 }
 
+th {
+	text-align: center;
+	font-size: 2rem;
+}
 
+.logo {
+	max-height: 50px;
+}
+
+#resultatsAfficher {
+	list-style-type: none;
+}
 /* la barre 'header' */
 .en-tete {
   display: flex;
